@@ -19,3 +19,7 @@ export const printFormat = (title: string, param: string | number): void => {
 export const fetchData = (url: string): Promise<string> => {
     return Promise.resolve(`data from ${url}`);
 }
+
+export function getName(user: { first: string; last: string }): string {
+    return `${user?.first ?? "first"} ${user?.last ?? "last "}`
+}
